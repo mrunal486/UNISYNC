@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UniSync Dashboard: Your personalized hub for recent activity, mentors, events, and leaderboard.">
+    <meta name="keywords" content="UniSync, dashboard, feed, mentors, events, leaderboard, student, alumni">
+    <title>Dashboard - UniSync</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo">UniSync</a>
+                <div class="nav-right">
+                    <div class="hamburger-menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="mentorship.html">Mentorship</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="chat.html">Chat</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <div class="auth-buttons">
+                        <a href="login.html" class="btn btn-secondary">Login</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <div class="container">
+                <h2 class="section-title">Your UniSync Dashboard</h2>
+
+                <div class="dashboard-grid">
+                    <div class="main-content">
+                        <div class="dashboard-section">
+                            <h3>Recent Activity Feed</h3>
+                            <div class="feed-post" data-category="coding">
+                                <h4>New Tutorial: Advanced JavaScript Concepts</h4>
+                                <p>Learn about closures, prototypes, and asynchronous JavaScript with practical examples.</p>
+                                <span class="post-meta">#coding #webdev</span>
+                            </div>
+                            <div class="feed-post" data-category="career">
+                                <h4>Webinar: Cracking the FAANG Interview</h4>
+                                <p>Tips and strategies from industry experts on how to ace your technical interviews.</p>
+                                <span class="post-meta">#career #interview</span>
+                            </div>
+                            <div class="feed-post" data-category="events">
+                                <h4>Reminder: AI & ML Workshop Tomorrow!</h4>
+                                <p>Don't forget to join our AI & Machine Learning workshop tomorrow at 10 AM.</p>
+                                <span class="post-meta">#events #ai-ml</span>
+                            </div>
+                            <div class="feed-post" data-category="study">
+                                <h4>Study Group for Data Science Midterms</h4>
+                                <p>Join our study group to prepare for the upcoming Data Science midterms. All levels welcome!</p>
+                                <span class="post-meta">#study #datascience</span>
+                            </div>
+                            <div class="feed-post" data-category="hobbies">
+                                <h4>Photography Club Meeting Next Week</h4>
+                                <p>Our next meeting will focus on landscape photography techniques. Bring your cameras!</p>
+                                <span class="post-meta">#hobbies #photography</span>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-section">
+                            <h3>Your Mentors</h3>
+                            <div class="mentor-card">
+                                <img src="https://via.placeholder.com/80" alt="Profile picture of Mentor John Doe">
+                                <h4>John Doe</h4>
+                                <p>Software Engineer at Google</p>
+                                <a href="mentorship.html" class="btn btn-primary btn-small">View Profile</a>
+                            </div>
+                            <div class="mentor-card">
+                                <img src="https://via.placeholder.com/80" alt="Profile picture of Mentor Jane Smith">
+                                <h4>Jane Smith</h4>
+                                <p>Product Manager at Microsoft</p>
+                                <a href="mentorship.html" class="btn btn-primary btn-small">View Profile</a>
+                            </div>
+                            <div class="mentor-card">
+                                <img src="https://via.placeholder.com/80" alt="Profile picture of Mentor Sam Wilson">
+                                <h4>Sam Wilson</h4>
+                                <p>Data Scientist at Netflix</p>
+                                <a href="mentorship.html" class="btn btn-primary btn-small">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-content">
+                        <div class="dashboard-section">
+                            <h3>Upcoming Events</h3>
+                            <ul class="event-list">
+                                <li>
+                                    <h4>Innovate & Create: Hackathon</h4>
+                                    <p>Sep 15-16, 2025</p>
+                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
+                                </li>
+                                <li>
+                                    <h4>AI & ML Workshop</h4>
+                                    <p>Oct 02, 2025</p>
+                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
+                                </li>
+                                <li>
+                                    <h4>Alumni Networking Night</h4>
+                                    <p>Nov 10, 2025</p>
+                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
+                                </li>
+                                <li>
+                                    <h4>The Future of Web3 & Blockchain</h4>
+                                    <p>Dec 01, 2025</p>
+                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="dashboard-section">
+                            <h3>Leaderboard</h3>
+                            <ol class="leaderboard-list">
+                                <li>Alice - 1500 pts</li>
+                                <li>Bob - 1200 pts</li>
+                                <li>Charlie - 1000 pts</li>
+                                <li>David - 800 pts</li>
+                                <li>Eve - 750 pts</li>
+                                <li>Frank - 600 pts</li>
+                                <li>Grace - 550 pts</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UniSync. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

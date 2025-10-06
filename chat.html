@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UniSync Chat: Real-time messaging with your peers, mentors, and alumni.">
+    <meta name="keywords" content="UniSync, chat, messaging, real-time, communication, students, mentors, alumni">
+    <title>Chat - UniSync</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo">UniSync</a>
+                <div class="nav-right">
+                    <div class="hamburger-menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="mentorship.html">Mentorship</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="chat.html">Chat</a></li>
+                    </ul>
+                    <div class="auth-buttons">
+                        <a href="login.html" class="btn btn-secondary">Login</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="chat">
+            <div class="container">
+                <h2 class="section-title">Real-time Chat</h2>
+
+                <div class="chat-container">
+                    <div class="chat-sidebar">
+                        <h3>Conversations</h3>
+                        <ul class="conversation-list">
+                            <li class="active">
+                                <img src="https://via.placeholder.com/50" alt="Profile picture of Mentor John Doe">
+                                <div class="conversation-info">
+                                    <h4>Mentor John Doe</h4>
+                                    <p>Hey, how's your project going?</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://via.placeholder.com/50" alt="Profile picture of Study Group - DSA">
+                                <div class="conversation-info">
+                                    <h4>Study Group - DSA</h4>
+                                    <p>Anyone free for a study session?</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://via.placeholder.com/50" alt="Profile picture of Jane Smith">
+                                <div class="conversation-info">
+                                    <h4>Jane Smith</h4>
+                                    <p>Thanks for the help!</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="chat-main">
+                        <div class="chat-header">
+                            <img src="https://via.placeholder.com/50" alt="Profile picture of Mentor John Doe">
+                            <h4>Mentor John Doe</h4>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="message received">
+                                <p>Hi [Student Name], how's your project going? Do you need any help with the new feature?</p>
+                                <span class="timestamp">10:00 AM</span>
+                            </div>
+                            <div class="message sent">
+                                <p>Hey John! It's going well, thanks. I'm a bit stuck on the authentication part. Can we connect later?</p>
+                                <span class="timestamp">10:05 AM</span>
+                            </div>
+                            <div class="message received">
+                                <p>Sure, I'm free around 3 PM today. Let me know if that works for you.</p>
+                                <span class="timestamp">10:07 AM</span>
+                            </div>
+                            <div class="message sent">
+                                <p>Perfect! See you then. Thanks a lot!</p>
+                                <span class="timestamp">10:08 AM</span>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Type a message...">
+                            <button class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UniSync. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
