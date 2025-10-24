@@ -552,6 +552,111 @@ header .container {
     font-size: 0.75rem;
 }
 
+.btn.btn-primary {
+            display: inline-block;
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+            
+            /* This is new/adjusted to fit the centered card */
+            margin-top: 1rem; 
+        }
+        
+        .btn.btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .filter-hidden {
+            display: none;
+        }
+
+         .community-threads {
+            max-width: 800px;
+            margin: 40px auto; 
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+        }
+
+        .filter-bar {
+            padding: 15px 25px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 10px; 
+        }
+
+        .filter-bar label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .filter-bar select {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 0.9rem;
+            background-color: #fff;
+        }
+        
+        .thread-list {
+            padding: 0;
+            margin: 0;
+        }
+
+        .thread-item {
+            padding: 20px 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .thread-item:last-child {
+            border-bottom: none;
+        }
+        
+
+        .thread-item:hover {
+            background-color: #fafcff;
+        }
+
+        .thread-item h4 {
+            font-size: 1.1rem; 
+            font-weight: 600;
+            color: #007bff; 
+            margin: 0 0 8px 0;
+        }
+
+        .thread-item .thread-meta {
+            font-size: 0.85rem; 
+            color: #666;
+            margin: 0 0 10px 0;
+        }
+
+        .thread-item p {
+            font-size: 0.95rem; 
+            color: #444;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .thread-item {
+  display: flex !important;
+  flex-direction: column !important;
+        }
+
+/* This is your JavaScript filter class */
+.filter-hidden {
+  display: none !important; 
+}
+
 /* Dashboard Page */
 #dashboard .dashboard-grid {
     display: grid;
