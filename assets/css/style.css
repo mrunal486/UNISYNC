@@ -498,6 +498,80 @@ header .container {
     font-weight: 500;
 }
 
+main.profile #profile .create-post-card .create-post-input-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+main.profile #profile .profile-pic-small {
+    width: 3rem;  
+    height: 3rem;
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
+
+main.profile #profile .create-post-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-lg);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+    box-sizing: border-box; 
+}
+
+main.profile .create-post-textarea:focus {
+    outline: 2px solid var(--text-blue);
+    border-color: transparent;
+}
+
+main.profile .create-post-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+main.profile .my-posts-card .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main.profile .post-item + .post-item {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-light);
+}
+
+main.profile .post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+main.profile .post-info h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+main.profile .post-info .post-date {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+main.profile .post-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    white-space: pre-wrap; 
+}
+
 /* Community Page */
 #community .community-grid {
     display: grid;
