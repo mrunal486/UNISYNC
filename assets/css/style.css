@@ -499,13 +499,13 @@ header .container {
 }
 
 /* Community Page */
-.community-grid {
+#community .community-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.community-card {
+#community .community-card {
     background-color: #fff;
     border-radius: 10px;
     padding: 2rem;
@@ -514,29 +514,29 @@ header .container {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.community-card:hover {
+#community .community-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.community-icon .material-icons {
+#community .community-icon .material-icons {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.community-details h3 {
+#community .community-details h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.community-details p {
+#community .community-details p {
     font-size: 0.9rem;
     color: #777;
     margin-bottom: 1rem;
 }
 
-.community-tags {
+#community .community-tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -544,7 +544,7 @@ header .container {
     margin-top: 1rem;
 }
 
-.community-tags span {
+#community .community-tags span {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 5px 10px;
@@ -552,7 +552,7 @@ header .container {
     font-size: 0.75rem;
 }
 
-.btn.btn-primary {
+#community .btn.btn-primary {
             display: inline-block;
             text-decoration: none;
             background-color: var(--primary-color);
@@ -569,15 +569,15 @@ header .container {
             margin-top: 1rem; 
         }
         
-        .btn.btn-primary:hover {
+        #community .btn.btn-primary:hover {
             background-color: #0056b3;
         }
 
-        .filter-hidden {
+        #community .filter-hidden {
             display: none;
         }
 
-         .community-threads {
+        #community .community-threads {
             max-width: 800px;
             margin: 40px auto; 
             background-color: #ffffff;
@@ -586,7 +586,7 @@ header .container {
             overflow: hidden; 
         }
 
-        .filter-bar {
+        #community .filter-bar {
             padding: 15px 25px;
             background-color: #f9f9f9;
             border-bottom: 1px solid #e0e0e0;
@@ -595,12 +595,12 @@ header .container {
             gap: 10px; 
         }
 
-        .filter-bar label {
+        #community .filter-bar label {
             font-weight: 500;
             color: #555;
         }
 
-        .filter-bar select {
+        #community .filter-bar select {
             padding: 8px 12px;
             border-radius: 6px;
             border: 1px solid #ccc;
@@ -608,54 +608,53 @@ header .container {
             background-color: #fff;
         }
         
-        .thread-list {
+        #community .thread-list {
             padding: 0;
             margin: 0;
         }
 
-        .thread-item {
+        #community .thread-item {
             padding: 20px 25px;
             border-bottom: 1px solid #e0e0e0;
         }
         
-        .thread-item:last-child {
+        #community .thread-item:last-child {
             border-bottom: none;
         }
         
 
-        .thread-item:hover {
+        #community .thread-item:hover {
             background-color: #fafcff;
         }
 
-        .thread-item h4 {
+        #community .thread-item h4 {
             font-size: 1.1rem; 
             font-weight: 600;
             color: #007bff; 
             margin: 0 0 8px 0;
         }
 
-        .thread-item .thread-meta {
+        #community .thread-item .thread-meta {
             font-size: 0.85rem; 
             color: #666;
             margin: 0 0 10px 0;
         }
 
-        .thread-item p {
+        #community .thread-item p {
             font-size: 0.95rem; 
             color: #444;
             line-height: 1.5;
             margin: 0;
         }
         
-        .thread-item {
-  display: flex !important;
-  flex-direction: column !important;
+        #community .thread-item {
+            display: flex !important;
+            flex-direction: column !important;
         }
 
-/* This is your JavaScript filter class */
-.filter-hidden {
-  display: none !important; 
-}
+        #community .filter-hidden {
+            display: none !important; 
+        }
 
 /* Dashboard Page */
 #dashboard .dashboard-grid {
@@ -988,6 +987,166 @@ header .container {
 #about .contact-form button {
     width: 100%;
 }
+
+/*Profile page*/
+main.profile {
+    max-width: 896px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main.profile .card {
+    background-color: var(--card-bg, #ffffff);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-xl, 0.75rem);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+main.profile .card-content {
+    padding: 1.5rem;
+}
+@media (min-width: 640px) {
+    main.profile .card-content {
+        padding: 2rem;
+    }
+}
+
+main.profile #profile .profile-banner img {
+    height: 7rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+main.profile #profile .profile-header-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+    
+main.profile #profile .profile-pic-wrapper {
+    position: relative;
+    width: auto; 
+    max-width: 7rem;
+}
+
+main.profile #profile .profile-pic {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 9999px;
+    border: 4px solid var(--card-bg, #ffffff);
+    margin-top: -5rem;
+    box-shadow: var(--shadow);
+}
+
+main.profile #profile .profile-headline {
+    margin-left: 1.25rem;
+}
+
+main.profile #profile .profile-headline h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary, #1f2937);
+    margin: 0;
+}
+    
+main.profile #profile .profile-headline p {
+    font-size: 1rem;
+    color: var(--text-secondary, #4b5563);
+    margin: 0.25rem 0 0 0;
+}
+
+main.profile #profile .profile-contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    color: var(--text-tertiary, #6b7280);
+}
+
+main.profile #profile .profile-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+main.profile .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary, #11182c);
+    margin: 0 0 1rem 0;
+}
+
+main.profile .about-text {
+    color: var(--text-secondary, #4b5563);
+    line-height: 1.6;
+}
+
+main.profile .list-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    
+main.profile .list-item {
+    display: flex;
+    gap: 1rem;
+}
+
+main.profile .list-item + .list-item {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-light, #e5e7eb);
+}
+    
+main.profile .item-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--border-radius-lg, 0.5rem);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+main.profile .item-details h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+main.profile .item-details .item-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary, #4b5563);
+    margin: 0.1rem 0;
+}
+main.profile .item-details .item-date {
+    font-size: 0.875rem;
+    color: var(--text-tertiary, #6b7280);
+    margin: 0.1rem 0;
+}
+main.profile .item-details .item-description {
+    color: var(--text-secondary, #4b5563);
+    margin-top: 0.5rem;
+}
+
+main.profile .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+main.profile .skill-pill {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0c4a6e;
+    border: 1px solid #bae6fd;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
 
 footer {
     background-color: var(--secondary-color);
