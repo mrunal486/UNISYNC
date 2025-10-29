@@ -42,151 +42,168 @@
     <main>
         <section id="dashboard">
             <div class="container">
-                <h2 class="section-title">Your UniSync Dashboard</h2>
-
+                <h2 class="section-title">Welcome back, Emma!</h2>
                 <div class="dashboard-grid">
-                    <div class="main-content">
-                        <div class="dashboard-section">
-                            <h3>Recent Activity Feed</h3>
-                            <div class="feed-post" data-category="coding">
-                                <h4>New Tutorial: Advanced JavaScript Concepts</h4>
-                                <p>Learn about closures, prototypes, and asynchronous JavaScript with practical examples.</p>
-                                <span class="post-meta">#coding #webdev</span>
-                            </div>
-                            <div class="feed-post" data-category="career">
-                                <h4>Webinar: Cracking the FAANG Interview</h4>
-                                <p>Tips and strategies from industry experts on how to ace your technical interviews.</p>
-                                <span class="post-meta">#career #interview</span>
-                            </div>
-                            <div class="feed-post" data-category="events">
-                                <h4>Reminder: AI & ML Workshop Tomorrow!</h4>
-                                <p>Don't forget to join our AI & Machine Learning workshop tomorrow at 10 AM.</p>
-                                <span class="post-meta">#events #ai-ml</span>
-                            </div>
-                            <div class="feed-post" data-category="study">
-                                <h4>Study Group for Data Science Midterms</h4>
-                                <p>Join our study group to prepare for the upcoming Data Science midterms. All levels welcome!</p>
-                                <span class="post-meta">#study #datascience</span>
-                            </div>
-                            <div class="feed-post" data-category="hobbies">
-                                <h4>Photography Club Meeting Next Week</h4>
-                                <p>Our next meeting will focus on landscape photography techniques. Bring your cameras!</p>
-                                <span class="post-meta">#hobbies #photography</span>
-                            </div>
-                        </div>
-
-                        <div class="dashboard-section">
-                            <h3>Your Mentors</h3>
-                            <div class="mentor-card">
-                                <img src="https://placehold.co/150x150/e0e0e0/333333?text=JD" alt="Profile picture of Mentor John Doe">
-                                <h4>John Doe</h4>
-                                <p>Software Engineer at Google</p>
-                                <a href="mentorship.html" class="btn btn-primary btn-small">View Profile</a>
-                            </div>
-                            <div class="mentor-card">
-                                <img src="https://placehold.co/150x150/e0e0e0/333333?text=JS" alt="Profile picture of Mentor Jane Smith">
-                                <h4>Jane Smith</h4>
-                                <p>Product Manager at Microsoft</p>
-                                <a href="mentorship.html" class="btn btn-primary btn-small">View Profile</a>
-                            </div>
-                            <div class="mentor-card">
-                                <img src="https://placehold.co/150x150/e0e0e0/333333?text=SW" alt="Profile picture of Mentor Sam Wilson">
-                                <h4>Sam Wilson</h4>
-                                <p>Data Scientist at Netflix</p>
-                                <a href="mentorship.html" class="btn btn-primary btn-small">View Profile</a>
-                            </div>
+                    <!-- Widget 1: Welcome -->
+                    <div class="dashboard-section welcome-widget">
+                        <h3>Quick Actions</h3>
+                        <p class="subtitle">What do you want to do? </p>
+                        <div class="quick-actions">
+                            <a href="community.html" class="btn btn-primary">
+                                <i class="material-icons">add_comment</i>
+                                <span>Ask a Question</span>
+                            </a>
+                            <a href="mentorship.html" class="btn btn-secondary">
+                                <i class="material-icons">person_search</i>
+                                <span>Find a Mentor</span>
+                            </a>
+                            <a href="chat.html" class="btn btn-secondary">
+                                <i class="material-icons">chat</i>
+                                <span>Check Messages</span>
+                                <span class="badge">3</span>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="sidebar-content">
-                        <div class="dashboard-section">
-                            <h3>Upcoming Events</h3>
-                            <ul class="event-list">
-                                <li>
+                    <!-- Widget 2: My Schedule (Smart Reminders) -->
+                    <div class="dashboard-section">
+                        <h3>My Schedule</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-info">
+                                    <h4>AI & ML Workshop</h4>
+                                    <p>Oct 02, 2025 | 10:00 AM</p>
+                                </div>
+                                <span class="schedule-tag registered">Registered</span>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-info">
+                                    <h4>Apply for Software Engineer Intern</h4>
+                                    <p>Google | Deadline: Oct 10, 2025</p>
+                                </div>
+                                <span class="schedule-tag deadline">Deadline</span>
+                            </div>
+                            <div class="schedule-item suggested">
+                                <div class="schedule-info">
                                     <h4>Innovate & Create: Hackathon</h4>
                                     <p>Sep 15-16, 2025</p>
-                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
-                                </li>
-                                <li>
-                                    <h4>AI & ML Workshop</h4>
-                                    <p>Oct 02, 2025</p>
-                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
-                                </li>
-                                <li>
-                                    <h4>Alumni Networking Night</h4>
-                                    <p>Nov 10, 2025</p>
-                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
-                                </li>
-                                <li>
-                                    <h4>The Future of Web3 & Blockchain</h4>
-                                    <p>Dec 01, 2025</p>
-                                    <a href="events.html" class="btn btn-secondary btn-small">Details</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="dashboard-section">
-                            <h3>Leaderboard</h3>
-                            <ol class="leaderboard-list">
-                                <li>
-                                    <span class="name">Alice</span>
-                                    <span class="points">1500 pts</span>
-                                </li>
-                                <li>
-                                    <span class="name">Bob</span>
-                                    <span class="points">1200 pts</span>
-                                </li>
-                                <li>
-                                    <span class="name">Charlie</span>
-                                    <span class="points">1000 pts</span>
-                                </li>
-                                <li>
-                                    <span class="name">David</span>
-                                    <span class="points">800 pts</span>
-                                </li>
-                                <li>
-                                    <span class="name">Eve</span>
-                                    <span class="points">750 pts</span>
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="dashboard-section">
-                            <h3>My Progress</h3>
-                            
-                            <!-- Rank and Points -->
-                            <div class="progress-stats">
-                                <div class="stat-item">
-                                    <span class="stat-value">#7</span>
-                                    <span class="stat-label">Rank in DSA Group</span>
                                 </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">1500</span>
-                                    <span class="stat-label">Total Points</span>
-                                </div>
-                            </div> 
-
-                            <!-- Badges -->
-                            <h4 class="progress-subtitle">My Badges</h4>
-                            <div class="badge-grid">
-                                <div class="badge-item" title="Event Attendee">📅 Event Attendee</div>
-                                <div class="badge-item" title="Mentor Connect">🤝 Mentor Connect</div>
-                                <div class="badge-item" title="Community Helper">🧑‍🤝‍🧑 Community Helper</div>
-                                <div class="badge-item locked" title="Contributor (Locked)">🔒 Contributor (Locked)</div>
-                            </div>
-
-                            <!-- Next Goal -->
-                            <h4 class="progress-subtitle">Next Goal</h4>
-                            <div class="progress-goal">
-                                <p>Post one more resource to earn the 'Contributor' badge!</p>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar" style="width: 50%;"></div>
-                                </div>
-                                <span class="progress-label">1 of 2 posts</span>
+                                <span class="schedule-tag suggested">Suggested</span>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+                    <!-- Widget 3: Suggested -->
+                    <div class="dashboard-section suggested-widget">
+                        <h3>Suggested for You</h3>
+                        <div class="community-suggestion-item">
+                        <div class="community-card-small">
+                            <div class="community-icon">
+                            </div>
+                            <div class="community-details">
+                                <i class="material-icons">code</i>
+                                <h4>Web Developers Club</h4>
+                                <p>A community for all things web development.</p>
+                                <a href="#" class="btn btn-primary btn-small">Join</a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="community-suggestion-item">
+                        <div class="community-card-small">
+                            <div class="community-icon">
+                            </div>
+                            <div class="community-details">
+                                 <i class="material-icons">sports_basketball</i>
+                                <h4>Basketball Club</h4>
+                                <p>Love playing basketball? Join our club for regular practice sessions and friendly matches. </p>
+                                <a href="#" class="btn btn-primary btn-small">Join</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Widget 4: My Connections -->
+                    <div class="dashboard-section">
+                        <h3>My Connections</h3>
+                        
+                        <h4>Mentor Suggestions</h4>
+                        <div class="mentor-scroll">
+                            <div class="mentor-card-small">
+                                <img src="https://placehold.co/300x300/e0e0e0/333333?text=EB" alt="Mentor Emily Brown">
+                                <h5>Emily Brown</h5>
+                                <a href="chat.html" class="btn btn-primary btn-small">Chat</a>
+                            </div>
+                            <div class="mentor-card-small">
+                                <img src="https://placehold.co/300x300/e0e0e0/333333?text=JS" alt="Mentor Jane Smith">
+                                <h5>Jane Smith</h5>
+                                <a href="chat.html" class="btn btn-primary btn-small">Chat</a>
+                            </div>
+                            <div class="mentor-card-small">
+                                <img src="https://placehold.co/300x300/e0e0e0/333333?text=SW" alt="Mentor Sam Wilson">
+                                <h5>Sam Wilson</h5>
+                                <a href="chat.html" class="btn btn-primary btn-small">Chat</a>
+                            </div>
+                            
+                        </div>
+                        <h4 class="h4-margin-top">Recent Messages</h4>
+                        <div class="recent-messages">
+                            <a href="chat.html" class="message-preview">
+                                <img src="https://placehold.co/300x300/e0e0e0/333333?text=JD" alt="Profile picture">
+                                <div class="message-info">
+                                    <h5>Mentor John Doe</h5>
+                                    <p>Hi, how's your project going?</p>
+                                </div>
+                            </a>
+                            <a href="chat.html" class="message-preview">
+                                <img src="https://placehold.co/300x300/e0e0e0/333333?text=DSA" alt="Profile picture">
+                                <div class="message-info">
+                                    <h5>Study Group - DSA</h5>
+                                    <p>Anyone free for a study session?</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Widget 5: Career Hub -->
+                    <div class="dashboard-section">
+                         <div class="widget-header career-widget-header">
+                            <h3>Career Hub</h3>
+                        </div>
+                        <h4>Recommended For You</h4>
+                         <div class="job-recommendation">
+                            <div class="job-info">
+                                <h4>Software Engineer Intern</h4>
+                                <p>Google | Mountain View, CA</p>
+                            </div>
+                            <a href="jobs.html" class="btn btn-secondary btn-small">Details</a>
+                         </div>
+                         <div class="job-recommendation">
+                            <div class="job-info">
+                                <h4>Product Manager</h4>
+                                <p>Microsoft | Redmond, WA</p>
+                            </div>
+                            <a href="jobs.html" class="btn btn-secondary btn-small">Details</a>
+                         </div>
+                    </div>
+
+                    <!-- Widget 6: My Progress -->
+                    <div class="dashboard-section progress-widget">
+                        <h3>My Progress</h3>
+                        <p class="rank">You are <strong>Rank 7</strong> of 10 in DSA Group</p>
+                        <p>1500 pts</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-inner" style="width: 75%;"></div>
+                        </div>
+                        <p class="progress-text">50 pts until Rank 8!</p>
+                        <div class="recent-badges">
+                            <i class="material-icons badge-icon" title="Top Contributor">military_tech</i>
+                            <i class="material-icons badge-icon" title="Community Helper">verified</i>
+                            <i class="material-icons badge-icon" title="Welcome">handshake</i>
+                        </div>
+                    </div>
+
+                </div> <!-- .dashboard-grid -->
+            </div> <!-- .container -->
         </section>
     </main>
 
