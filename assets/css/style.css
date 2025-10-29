@@ -114,7 +114,7 @@ header .container {
 }
 
 .btn-primary:hover {
-    background-color: #2a5a9a;
+    background-color: #6dabfd;
 }
 
 .btn-secondary {
@@ -125,7 +125,21 @@ header .container {
 .btn-secondary:hover {
     background-color: #e0e0e0;
 }
-
+.glass-box {
+    /* 1. The semi-transparent background (the glass tint) */
+    background: rgba(255, 255, 255, 0.1);
+    /* 2. The blur effect on the background */
+    backdrop-filter: blur(15px); 
+    /* 3. The rounded corners */
+    border-radius: 1rem; /* 16px */   
+    /* 4. The subtle "edge" border */
+    border: 1px solid rgba(255, 255, 255, 0.2);  
+    /* 5. A shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Other styles for looks */
+    padding: 2rem;
+    color: white;
+}
 #hero {
     background: linear-gradient(to right, #3a7bd5, #00d2ff);
     color: #fff;
