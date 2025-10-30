@@ -114,7 +114,7 @@ header .container {
 }
 
 .btn-primary:hover {
-    background-color: #2a5a9a;
+    background-color: #6dabfd;
 }
 
 .btn-secondary {
@@ -125,13 +125,27 @@ header .container {
 .btn-secondary:hover {
     background-color: #e0e0e0;
 }
-
+.glass-box {
+    /* 1. The semi-transparent background (the glass tint) */
+    background: rgba(255, 255, 255, 0.1);
+    /* 2. The blur effect on the background */
+    backdrop-filter: blur(15px); 
+    /* 3. The rounded corners */
+    border-radius: 1rem; /* 16px */   
+    /* 4. The subtle "edge" border */
+    border: 1px solid rgba(255, 255, 255, 0.2);  
+    /* 5. A shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Other styles for looks */
+    padding: 1rem;
+    color: white;
+}
 #hero {
     background: linear-gradient(to right, #3a7bd5, #00d2ff);
     color: #fff;
     text-align: center;
     padding: 150px 0 100px;
-    margin-top: 70px; /* To offset the fixed header */
+    margin-top: 70px;
 }
 
 #hero h1 {
@@ -275,12 +289,18 @@ header .container {
 }
 
 .mentor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    flex-grow: 0;
+    max-width: 400px; 
     background-color: #fff;
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
 }
 
 .mentor-card:hover {
@@ -410,41 +430,59 @@ header .container {
 }
 
 .login-box {
-    background-color: #fff;
     padding: 3rem;
     border-radius: 10px;
+    border-color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     text-align: center;
-    width: 500px;
+    width: 400px;
     max-width: 90%;
 }
 
-.login-box h2 {
+.login-box h1 {
     margin-top: 0;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: white;
 }
 
 .input-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: left;
+    display: grid; 
+  grid-template-columns: 1fr max-content;
+  column-gap: .75rem;
+  align-items: center;
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding-inline: 1.25rem;
+  border-radius: 4rem;
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+.input{
+  border: none;
+  outline: none;
+  width: 100%;
+  background: none;
+  color: var(--white-color);
+  padding-block: 1rem;
 }
 
-.input-group input, .input-group select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.input::placeholder {
+  color: var(--white-color);
+  font-size: medium;
+}
+.login-box .btn-primary {
+    padding: 1rem 2rem; 
+    border-radius: 4rem; 
+    font-size: medium;
+}
+.input i {
+  font-size: 1.25rem;
+  color: hsla(0, 0%, 100%, 0.7);
 }
 
 .signup-link {
     margin-top: 2rem;
+    color: white;
 }
 
 #profile .profile-header {
@@ -577,9 +615,16 @@ main.profile .post-content p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: stretch;
 }
 
-#community .community-card {
+#community .community-card {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    flex-grow: 0;
+    max-width: 400px; 
     background-color: #fff;
     border-radius: 10px;
     padding: 2rem;
@@ -1314,14 +1359,15 @@ main.profile .post-content p {
 }
 
 #about .contact-form input, #about .contact-form textarea {
-    width: 100%;
+    width: 450px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 #about .contact-form textarea {
-    resize: vertical;
+    resize: none;
 }
 
 #about .contact-form button {

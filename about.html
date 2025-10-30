@@ -96,5 +96,56 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script> 
+        const contactForm = document.querySelector('.contact-form');
+
+    if (contactForm) {
+        // Add a submit event listener to the form
+        contactForm.addEventListener('submit', (event) => {
+            // Prevent the default form submission (which reloads the page)
+            event.preventDefault();
+
+            // Get form data (optional, but good practice)
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const message = document.getElementById('contact-message').value;
+
+            // Log the data to the console to show it's working
+            console.log('Form submitted!');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            // --- Mock Sending Message ---
+            // In a real app, you would send this data to a server here.
+            
+            // Get the submit button
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            
+            // Disable the button and show a "sending" message
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // Simulate a network request (e.g., 2 seconds)
+            setTimeout(() => {
+                // Show a success message
+                submitButton.textContent = 'Message Sent!';
+                submitButton.style.backgroundColor = '#28a745'; // Green color
+
+                // Reset the form fields
+                contactForm.reset();
+
+                // Re-enable the button and restore original text after a delay
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    submitButton.style.backgroundColor = ''; // Revert to original color
+                }, 3000); // Wait 3 seconds before resetting the button
+
+            }, 2000); // Simulate 2-second send time
+        });
+    }
+
+    </script>
 </body>
 </html>
