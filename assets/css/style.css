@@ -615,9 +615,16 @@ main.profile .post-content p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: stretch;
 }
 
-#community .community-card {
+#community .community-card {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    flex-grow: 0;
+    max-width: 400px; 
     background-color: #fff;
     border-radius: 10px;
     padding: 2rem;
