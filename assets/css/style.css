@@ -145,7 +145,7 @@ header .container {
     color: #fff;
     text-align: center;
     padding: 150px 0 100px;
-    margin-top: 70px; /* To offset the fixed header */
+    margin-top: 70px;
 }
 
 #hero h1 {
@@ -1359,14 +1359,15 @@ main.profile .post-content p {
 }
 
 #about .contact-form input, #about .contact-form textarea {
-    width: 100%;
+    width: 450px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 #about .contact-form textarea {
-    resize: vertical;
+    resize: none;
 }
 
 #about .contact-form button {
