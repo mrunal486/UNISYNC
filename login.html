@@ -66,15 +66,16 @@ input::placeholder {
         <div class="login-box glass-box">
             <h1>Login to UniSync</h1>
             <form>
-                <div class="input-group">
-                    <input type="email" id="email" name="email" required placeholder="Email" class="input" autocomplete="off" >
-                    <i class="ri-mail-fill"></i>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" required placeholder="Password" class="input" autocomplete="off">
-                    <i class="ri-lock-2-fill"></i>
-                </div>
-                <button type="submit" class="btn btn-primary glass-box">Login</button>
+                                <div class="input-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <div id="email-feedback" class="feedback"></div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" required>
+                                    <div id="password-feedback" class="feedback"></div>
+                                </div>                <button type="submit" class="btn btn-primary glass-box">Login</button>
             </form>
             <p class="signup-link">Don't have an account? <a href="signup.html" class="signup-link">Sign Up</a></p>
         </div>

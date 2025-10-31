@@ -132,15 +132,58 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Validation functions
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function validatePassword(password) {
+        // At least 8 characters, one uppercase, one lowercase, one number, one special character
+        const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        return re.test(String(password));
+    }
+
+    function setFeedback(element, isValid, message) {
+        element.textContent = message;
+        element.classList.remove('valid', 'invalid');
+        if (isValid) {
+            element.classList.add('valid');
+        } else {
+            element.classList.add('invalid');
+        }
+    }
+
     // Login Form
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const emailFeedback = document.getElementById('email-feedback');
+        const passwordFeedback = document.getElementById('password-feedback');
+
+        emailInput.addEventListener('input', () => {
+            if (validateEmail(emailInput.value)) {
+                setFeedback(emailFeedback, true, 'Valid email');
+            } else {
+                setFeedback(emailFeedback, false, 'Please enter a valid email');
+            }
+        });
+
+        passwordInput.addEventListener('input', () => {
+            if (validatePassword(passwordInput.value)) {
+                setFeedback(passwordFeedback, true, 'Strong password');
+            } else {
+                setFeedback(passwordFeedback, false, 'Password must be at least 8 characters, with uppercase, lowercase, number, and special character');
+            }
+        });
+
         loginForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+            const email = emailInput.value;
+            const password = passwordInput.value;
 
-            if (email && password) {
+            if (validateEmail(email) && validatePassword(password)) {
                 // Simulate a successful login
                 showPopup('User logged in successfully!');
                 // Redirect to the dashboard or another page
@@ -148,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     window.location.href = 'dashboard.html';
                 }, 2000);
             } else {
-                showPopup('Please fill in all fields.');
+                showPopup('Please correct the errors in the form.');
             }
         });
     }
@@ -156,13 +199,35 @@ document.addEventListener('DOMContentLoaded', function () {
     // Signup Form
     const signupForm = document.getElementById('signup-form');
     if (signupForm) {
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const emailFeedback = document.getElementById('email-feedback');
+        const passwordFeedback = document.getElementById('password-feedback');
+
+        emailInput.addEventListener('input', () => {
+            if (validateEmail(emailInput.value)) {
+                setFeedback(emailFeedback, true, 'Valid email');
+            } else {
+                setFeedback(emailFeedback, false, 'Please enter a valid email');
+            }
+        });
+
+        passwordInput.addEventListener('input', () => {
+            if (validatePassword(passwordInput.value)) {
+                setFeedback(passwordFeedback, true, 'Strong password');
+            } else {
+                setFeedback(passwordFeedback, false, 'Password must be at least 8 characters, with uppercase, lowercase, number, and special character');
+            }
+        });
+
         signupForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const password = passwordInput.value;
 
-            if (name && email && password) {
+            if (name && validateEmail(email) && validatePassword(password)) {
                 // Simulate a successful signup
                 showPopup('User created successfully!');
                 // Redirect to the login page
@@ -170,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     window.location.href = 'login.html';
                 }, 2000);
             } else {
-                showPopup('Please fill in all required fields.');
+                showPopup('Please correct the errors in the form.');
             }
         });
     }
