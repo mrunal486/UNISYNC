@@ -77,7 +77,7 @@
                             <i class="material-icons">book</i>
                         </div>
                         <div class="community-details">
-                            <h3>Data Structures & Algorithms Study Group</h3>
+                            <h3>DSA Study Group</h3>
                             <p>Preparing for technical interviews? Join our study group to practice data structures and algorithms problems together.</p>
                             <div class="community-tags">
                                 <span>#dsa</span>
@@ -126,7 +126,7 @@
                         </div>
                         <div class="community-details">
                             <h3>AI/ML Research Group</h3>
-                            <p>Dive deep into the world of Artificial Intelligence and Machine Learning. Discuss research papers, implement models, and collaborate on projects.</p>
+                            <p>Dive deep into the world of Artificial Intelligence and Machine Learning. Discuss and collaborate on projects.</p>
                             <div class="community-tags">
                                 <span>#ai</span>
                                 <span>#ml</span>
@@ -153,16 +153,16 @@
                     </div>
                 </div>
 
-                <div class="community-threads">
+                 <div class="community-threads">
                     <h3 class="section-title">Community Threads</h3>
                     <div class="filter-bar">
                         <label for="thread-category">Filter by category:</label>
                         <select id="thread-category" name="thread-category">
-                            <option value="all">All</option>
-                            <option value="general">General</option>
-                            <option value="academics">Academics</option>
-                            <option value="career">Career</option>
-                            <option value="social">Social</option>
+                        <option value="all">All</option>
+                        <option value="general">General</option>
+                        <option value="academics">Academics</option>
+                        <option value="career">Career</option>
+                        <option value="social">Social</option>
                         </select>
                     </div>
 
@@ -170,27 +170,27 @@
                         <div class="thread-item" data-thread-category="academics">
                             <h4>Best resources for learning React?</h4>
                             <p class="thread-meta">Posted by: StudentA | Category: #academics | 5 replies</p>
-                            <p>Looking for recommendations on online courses or tutorials for React. Any suggestions?</p>
+                            <p class="thread-preview">Looking for recommendations on online courses or tutorials for React. Any suggestions?</p>
                         </div>
                         <div class="thread-item" data-thread-category="career">
                             <h4>Tips for acing your first internship interview?</h4>
                             <p class="thread-meta">Posted by: StudentB | Category: #career | 12 replies</p>
-                            <p>I have an interview next week for a software engineering internship. Any advice on how to prepare?</p>
+                            <p class="thread-preview">I have an interview next week for a software engineering internship. Any advice on how to prepare?</p>
                         </div>
                         <div class="thread-item" data-thread-category="social">
                             <h4>Anyone interested in a weekend hike?</h4>
                             <p class="thread-meta">Posted by: StudentC | Category: #social | 3 replies</p>
-                            <p>Planning a hike this Saturday. Let me know if you'd like to join!</p>
+                            <p class="thread-preview">Planning a hike this Saturday. Let me know if you'd like to join!</p>
                         </div>
                         <div class="thread-item" data-thread-category="general">
-                            <h4>Welcome new students! Ask anything here.</h4>
-                            <p class="thread-meta">Posted by: Admin | Category: #general | 20 replies</p>
-                            <p>A warm welcome to all new students joining UniSync! Feel free to ask any questions you have.</p>
+                        <h4>Welcome new students! Ask anything here.</h4>
+                        <p class="thread-meta">Posted by: Admin | Category: #general | 20 replies</p>
+                        <p class="thread-preview">A warm welcome to all new students joining UniSync! Feel free to ask any questions you have.</p>
                         </div>
                         <div class="thread-item" data-thread-category="academics">
                             <h4>Understanding Big O Notation - simplified explanation needed!</h4>
                             <p class="thread-meta">Posted by: StudentD | Category: #academics | 8 replies</p>
-                            <p>I'm struggling with Big O notation. Can someone explain it in a simpler way?</p>
+                            <p class="thread-preview">I'm struggling with Big O notation. Can someone explain it in a simpler way?</p>
                         </div>
                     </div>
                 </div>
@@ -215,7 +215,7 @@
             communityCards.forEach(card => {
                 const category = card.getAttribute('data-category');
                 if (selectedCategory === 'all' || selectedCategory === category) {
-                    card.style.display = 'flex';
+                    card.style.display = ''; 
                 } else {
                     card.style.display = 'none';
                 }
@@ -226,17 +226,18 @@
         const threadItems = document.querySelectorAll('.thread-item');
 
         threadCategoryFilter.addEventListener('change', () => {
-            const selectedCategory = threadCategoryFilter.value;
+        const selectedCategory = threadCategoryFilter.value;
 
-            threadItems.forEach(item => {
-                const category = item.getAttribute('data-thread-category');
-                if (selectedCategory === 'all' || selectedCategory === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+        threadItems.forEach(item => {
+        const category = item.getAttribute('data-thread-category');
+
+        if (selectedCategory === 'all' || selectedCategory === category) {
+            item.classList.remove('filter-hidden'); // SHOW the item
+        } else {
+            item.classList.add('filter-hidden');    // HIDE the item
+        }
         });
+    });
     </script>
 </body>
 </html>

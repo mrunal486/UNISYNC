@@ -49,19 +49,20 @@
                     <h3>Our Team</h3>
                     <div class="team-grid">
                         <div class="team-member-card">
-                            <img src="https://via.placeholder.com/150" alt="Alice Johnson, Lead Developer">
-                            <h4>Alice Johnson</h4>
-                            <p>Lead Developer</p>
+                            <img src="assets/img/aditya.jpg" alt="Aditya Sabnis">
+                            <h4>Aditya Sabnis</h4>
                         </div>
                         <div class="team-member-card">
-                            <img src="https://via.placeholder.com/150" alt="Bob Williams, UI/UX Designer">
-                            <h4>Bob Williams</h4>
-                            <p>UI/UX Designer</p>
+                            <img src="assets/img/elissa.jpg" alt="Elissa Quadros">
+                            <h4>Elissa Quadros</h4>
                         </div>
                         <div class="team-member-card">
-                            <img src="https://via.placeholder.com/150" alt="Charlie Davis, Community Manager">
-                            <h4>Charlie Davis</h4>
-                            <p>Community Manager</p>
+                            <img src="assets/img/mrunal.jpg" alt="Mrunal Sagvekar">
+                            <h4>Mrunal Sagvekar</h4>
+                        </div>
+                        <div class="team-member-card">
+                            <img src="assets/img/rahul.jpg "Rahul Prajapati">
+                            <h4>Rahul Prajapati</h4>
                         </div>
                     </div>
                 </div>
@@ -95,5 +96,56 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script> 
+        const contactForm = document.querySelector('.contact-form');
+
+    if (contactForm) {
+        // Add a submit event listener to the form
+        contactForm.addEventListener('submit', (event) => {
+            // Prevent the default form submission (which reloads the page)
+            event.preventDefault();
+
+            // Get form data (optional, but good practice)
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const message = document.getElementById('contact-message').value;
+
+            // Log the data to the console to show it's working
+            console.log('Form submitted!');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            // --- Mock Sending Message ---
+            // In a real app, you would send this data to a server here.
+            
+            // Get the submit button
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            
+            // Disable the button and show a "sending" message
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            // Simulate a network request (e.g., 2 seconds)
+            setTimeout(() => {
+                // Show a success message
+                submitButton.textContent = 'Message Sent!';
+                submitButton.style.backgroundColor = '#28a745'; // Green color
+
+                // Reset the form fields
+                contactForm.reset();
+
+                // Re-enable the button and restore original text after a delay
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    submitButton.style.backgroundColor = ''; // Revert to original color
+                }, 3000); // Wait 3 seconds before resetting the button
+
+            }, 2000); // Simulate 2-second send time
+        });
+    }
+
+    </script>
 </body>
 </html>
