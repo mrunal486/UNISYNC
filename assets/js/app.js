@@ -171,7 +171,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         passwordInput.addEventListener('input', () => {
-            if (validatePassword(passwordInput.value)) {
+            const password = passwordInput.value;
+            if (password.length === 0) {
+                passwordFeedback.className = 'feedback password-suggestion';
+                passwordFeedback.textContent = 'Password must be at least 8 characters, with uppercase, lowercase, number, and special character';
+            } else if (validatePassword(password)) {
                 setFeedback(passwordFeedback, true, 'Strong password');
             } else {
                 setFeedback(passwordFeedback, false, 'Password must be at least 8 characters, with uppercase, lowercase, number, and special character');
@@ -214,7 +218,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         passwordInput.addEventListener('input', () => {
-            if (validatePassword(passwordInput.value)) {
+            const password = passwordInput.value;
+            if (password.length === 0) {
+                passwordFeedback.className = 'feedback password-suggestion';
+                passwordFeedback.textContent = 'Password must be at least 8 characters, with uppercase, lowercase, number, and special character';
+            } else if (validatePassword(password)) {
                 setFeedback(passwordFeedback, true, 'Strong password');
             } else {
                 setFeedback(passwordFeedback, false, 'Password must be at least 8 characters, with uppercase, lowercase, number, and special character');
