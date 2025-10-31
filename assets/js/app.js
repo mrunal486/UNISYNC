@@ -106,4 +106,72 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // --- Form Submission Logic ---
+
+    const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popup-message');
+    const closeBtn = document.querySelector('.close-btn');
+
+    function showPopup(message) {
+        popupMessage.textContent = message;
+        popup.style.display = 'flex';
+    }
+
+    if(closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    }
+
+    if(popup) {
+        window.addEventListener('click', (e) => {
+            if (e.target == popup) {
+                popup.style.display = 'none';
+            }
+        });
+    }
+
+    // Login Form
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email && password) {
+                // Simulate a successful login
+                showPopup('User logged in successfully!');
+                // Redirect to the dashboard or another page
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 2000);
+            } else {
+                showPopup('Please fill in all fields.');
+            }
+        });
+    }
+
+    // Signup Form
+    const signupForm = document.getElementById('signup-form');
+    if (signupForm) {
+        signupForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (name && email && password) {
+                // Simulate a successful signup
+                showPopup('User created successfully!');
+                // Redirect to the login page
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 2000);
+            } else {
+                showPopup('Please fill in all required fields.');
+            }
+        });
+    }
 });
